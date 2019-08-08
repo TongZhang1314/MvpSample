@@ -1,4 +1,6 @@
 package mvpsample.tongzhang.com.mvpsample.base;
 
-class BasePresenter {
+public  interface BasePresenter<T extends BaseView> {
+    void attachView(T view);
+    void detachView();
 }

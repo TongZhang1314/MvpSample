@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <!--圆形layout-->
+    <declare-styleable name="RoundCornerLayout">
+        <attr name="roundLayoutRadius" format="dimension" />
+    </declare-styleable>
+</resources>

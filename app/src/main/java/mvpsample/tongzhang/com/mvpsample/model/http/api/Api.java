@@ -9,6 +9,7 @@ import retrofit2.http.Query;
 
 public interface Api {
 
+    String HOST = "https://www.wanandroid.com";
     /**
      * 登陆
      * http://www.wanandroid.com/user/login

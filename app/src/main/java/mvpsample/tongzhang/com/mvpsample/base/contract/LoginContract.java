@@ -9,6 +9,6 @@ public interface LoginContract {
         void loginFail();
     }
     interface Presenter extends BasePresenter<LoginContract.View>{
-
+        void login();
     }
 }

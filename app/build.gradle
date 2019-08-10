@@ -41,4 +41,12 @@ dependencies {
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-31'
     //rxjava
     implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    //okhttp logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.1'
+    //retrofit coverter
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
 }

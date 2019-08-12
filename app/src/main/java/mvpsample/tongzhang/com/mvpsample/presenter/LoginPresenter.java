@@ -15,5 +15,6 @@ public class LoginPresenter extends RxPresenter<LoginContract.View> implements L
     @Override
     public void login(String account,String password) {
 //        addSubscribe(netModel.login(account,password));
+        //test contribution
     }
 }

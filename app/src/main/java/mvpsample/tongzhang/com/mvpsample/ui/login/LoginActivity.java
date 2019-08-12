@@ -23,7 +23,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     protected void initPresentet() {
-        mPresenter = new LoginPresenter();
+        mPresenter = new LoginPresenter(this);
     }
 
     @Override

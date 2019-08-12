@@ -12,6 +12,7 @@ import mvpsample.tongzhang.com.mvpsample.base.contract.LoginContract;
 import mvpsample.tongzhang.com.mvpsample.presenter.LoginPresenter;
 
 public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginContract.View {
+
     @BindView(R.id.et_account)
     EditText etAccount;
     @BindView(R.id.et_password)
@@ -23,7 +24,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     @Override
     protected void initPresentet() {
-        mPresenter = new LoginPresenter();
+        mPresenter = new LoginPresenter(this);
     }
 
     @Override

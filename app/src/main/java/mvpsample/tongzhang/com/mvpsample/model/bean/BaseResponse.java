@@ -1,18 +1,20 @@
 package mvpsample.tongzhang.com.mvpsample.model.bean;
 
 public class BaseResponse<T> {
+    public static final int SUCCESS = 0;
+    public static final int FAIL = 1;
     /**
      * 0:成功  其余:失败
      */
-    private String errorCode;
+    private int errorCode;
     private String errorMsg;
     private T data;
 
-    public String getErrorCode() {
+    public int getErrorCode() {
         return errorCode;
     }
 
-    public void setErrorCode(String errorCode) {
+    public void setErrorCode(int errorCode) {
         this.errorCode = errorCode;
     }
 

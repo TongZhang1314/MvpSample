@@ -30,5 +30,5 @@ public interface Api {
      * @return
      */
     @POST("/user/register")
-    Observable<BaseResponse> getRegisterData(@Query("username") String username,@Query("password")String password,@Query("repassword")String repassword);
+    Observable<BaseResponse<Object>> getRegisterData(@Query("username") String username,@Query("password")String password,@Query("repassword")String repassword);
 }

@@ -24,4 +24,8 @@ public class NetModel {
     public Observable<BaseResponse> login(String account,String password){
         return api.getLoginData(account,password);
     }
+
+    public Observable<BaseResponse<Object>> register(String account,String password,String repassword){
+        return api.getRegisterData(account,password,repassword);
+    }
 }

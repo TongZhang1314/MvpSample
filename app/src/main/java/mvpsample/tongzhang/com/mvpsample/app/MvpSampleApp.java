@@ -2,7 +2,6 @@ package mvpsample.tongzhang.com.mvpsample.app;
 
 import android.app.Activity;
 import android.app.Application;
-import android.text.TextUtils;
 
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -11,11 +10,11 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 
 import java.util.Stack;
 
-public class App extends Application {
-    private static App instance;
+public class MvpSampleApp extends Application {
+    private static MvpSampleApp instance;
     private Stack<Activity> activities;
 
-    public static synchronized App getInstance() {
+    public static synchronized MvpSampleApp getInstance() {
         return instance;
     }
 

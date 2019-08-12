@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportActivity;
 import mvpsample.tongzhang.com.mvpsample.R;
-import mvpsample.tongzhang.com.mvpsample.app.App;
+import mvpsample.tongzhang.com.mvpsample.app.MvpSampleApp;
 import mvpsample.tongzhang.com.mvpsample.widget.WaitingDialog;
 
 public abstract class SimpleActivity extends SupportActivity {
@@ -32,7 +32,7 @@ public abstract class SimpleActivity extends SupportActivity {
         mUnBinder = ButterKnife.bind(this);
         mContext = this;
         onViewCreated();
-        App.getInstance().addActivity(this);
+        MvpSampleApp.getInstance().addActivity(this);
         whiteTheme();
         initEventAndData();
         initDialog();

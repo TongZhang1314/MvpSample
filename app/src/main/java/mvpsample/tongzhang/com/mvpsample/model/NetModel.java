@@ -2,6 +2,7 @@ package mvpsample.tongzhang.com.mvpsample.model;
 
 import io.reactivex.Observable;
 import mvpsample.tongzhang.com.mvpsample.model.bean.BaseResponse;
+import mvpsample.tongzhang.com.mvpsample.model.bean.login.UserData;
 import mvpsample.tongzhang.com.mvpsample.model.http.RetrofitCreateHelper;
 import mvpsample.tongzhang.com.mvpsample.model.http.api.Api;
 
@@ -25,7 +26,7 @@ public class NetModel {
         return api.getLoginData(account,password);
     }
 
-    public Observable<BaseResponse<Object>> register(String account,String password,String repassword){
+    public Observable<BaseResponse> register(String account, String password, String repassword){
         return api.getRegisterData(account,password,repassword);
     }
 }

@@ -1,5 +1,7 @@
 package mvpsample.tongzhang.com.mvpsample.base;
 
+import android.widget.Toast;
+
 public abstract class BaseActivity<T extends BasePresenter> extends SimpleActivity implements BaseView  {
     protected T mPresenter;
 
@@ -20,4 +22,8 @@ public abstract class BaseActivity<T extends BasePresenter> extends SimpleActivi
         cancelDialog();
     }
 
+    @Override
+    public void showErrorMessage(String mes) {
+        Toast.makeText(this,mes,Toast.LENGTH_SHORT).show();
+    }
 }

@@ -29,6 +29,7 @@ public abstract class SimpleActivity extends SupportActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getLayout());
         mUnBinder = ButterKnife.bind(this);
         mContext = this;
         onViewCreated();
@@ -95,7 +96,16 @@ public abstract class SimpleActivity extends SupportActivity {
         this.noAnimation = noAnimation;
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        MvpSampleApp.getInstance().removeTop();
+        if (mUnBinder != null && mUnBinder != Unbinder.EMPTY) {
+            mUnBinder.unbind();
+            mUnBinder = null;
+        }
 
+    }
 
     protected abstract int getLayout();
     protected abstract void initEventAndData();

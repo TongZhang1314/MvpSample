@@ -3,6 +3,7 @@
     package="mvpsample.tongzhang.com.mvpsample">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".app.MvpSampleApp"
         android:allowBackup="true"
@@ -12,13 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.MainActivity">
+
+        </activity>
+        <activity android:name=".ui.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ui.login.LoginActivity">
         </activity>
         <activity android:name=".ui.login.RegisterActivity">
         </activity>

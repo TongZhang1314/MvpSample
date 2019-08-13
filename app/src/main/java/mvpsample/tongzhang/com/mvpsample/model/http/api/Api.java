@@ -2,6 +2,7 @@ package mvpsample.tongzhang.com.mvpsample.model.http.api;
 
 import io.reactivex.Observable;
 import mvpsample.tongzhang.com.mvpsample.model.bean.BaseResponse;
+import mvpsample.tongzhang.com.mvpsample.model.bean.login.UserData;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
@@ -30,5 +31,5 @@ public interface Api {
      * @return
      */
     @POST("/user/register")
-    Observable<BaseResponse<Object>> getRegisterData(@Query("username") String username,@Query("password")String password,@Query("repassword")String repassword);
+    Observable<BaseResponse> getRegisterData(@Query("username") String username, @Query("password")String password, @Query("repassword")String repassword);
 }

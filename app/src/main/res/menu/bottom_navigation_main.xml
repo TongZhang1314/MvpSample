@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tab_main"
+        android:enabled="true"
+        android:icon="@drawable/home_navigation"
+        android:title="首页"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_section"
+        android:enabled="true"
+        android:icon="@drawable/section_navigation"
+        android:title="版块"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_project"
+        android:enabled="true"
+        android:icon="@drawable/project_navigation"
+        android:title="项目"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tab_wx_article"
+        android:enabled="true"
+        android:icon="@drawable/wx_navigation"
+        android:title="公众号"
+        app:showAsAction="ifRoom" />
+</menu>

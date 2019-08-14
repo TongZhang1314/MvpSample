@@ -1,7 +1,6 @@
 package mvpsample.tongzhang.com.mvpsample.ui.login;
 
 import android.content.Intent;
-import android.util.ArraySet;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -13,6 +12,7 @@ import mvpsample.tongzhang.com.mvpsample.R;
 import mvpsample.tongzhang.com.mvpsample.base.BaseActivity;
 import mvpsample.tongzhang.com.mvpsample.base.contract.LoginContract;
 import mvpsample.tongzhang.com.mvpsample.presenter.LoginPresenter;
+import mvpsample.tongzhang.com.mvpsample.ui.MainActivity;
 
 public class LoginActivity extends BaseActivity<LoginPresenter> implements LoginContract.View {
 
@@ -61,6 +61,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     public void loginSuccess() {
         Toast.makeText(this,"登录成功",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this,MainActivity.class));
     }
 
     @Override

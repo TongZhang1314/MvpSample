@@ -1,4 +1,4 @@
-package mvpsample.tongzhang.com.mvpsample.ui.login;
+package mvpsample.tongzhang.com.mvpsample.ui.login.activity;
 
 import android.widget.Button;
 import android.widget.EditText;

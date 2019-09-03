@@ -5,9 +5,11 @@ import mvpsample.tongzhang.com.mvpsample.base.BaseView;
 
 public interface MainContract {
     interface View extends BaseView{
-        void loginSuccess();
+
     }
     interface Presenter extends BasePresenter<MainContract.View>{
         void login();
+        void getBanner();
+        void getDataList();
     }
 }

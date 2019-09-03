@@ -12,7 +12,7 @@ import mvpsample.tongzhang.com.mvpsample.base.RxPresenter;
 import mvpsample.tongzhang.com.mvpsample.base.contract.MainContract;
 import mvpsample.tongzhang.com.mvpsample.presenter.MainPresenter;
 
-public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
+public class MainActivity extends BaseActivity<MainContract.Presenter> implements MainContract.View {
 
 
     @Override
@@ -28,12 +28,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     @Override
     protected void initEventAndData() {
 
-    }
-
-
-
-    @Override
-    public void loginSuccess() {
 
     }
+
 }

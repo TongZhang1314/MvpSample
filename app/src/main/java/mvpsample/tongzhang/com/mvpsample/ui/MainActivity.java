@@ -17,7 +17,7 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
 
     @Override
     protected void initPresentet() {
-
+        Log.i("zt", "initPresentet: ");
     }
 
     @Override

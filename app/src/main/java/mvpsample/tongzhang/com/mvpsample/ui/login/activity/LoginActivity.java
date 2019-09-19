@@ -35,6 +35,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     void goLogin() {
         if (etAccount.getText().toString().isEmpty()) {
             Toast.makeText(this, "请输入账号", Toast.LENGTH_SHORT).show();
+            //
         } else if (etPassword.getText().toString().isEmpty()) {
             Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
         }else {

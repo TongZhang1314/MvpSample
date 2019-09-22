@@ -19,6 +19,7 @@ public class MainPresenter extends RxPresenter<MainContract.View> implements Mai
 
     @Override
     public void getBanner() {
+        //
 
     }
 

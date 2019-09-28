@@ -1,14 +1,14 @@
-package mvpsample.tongzhang.com.mvpsample.model.http.api;
+package mvpsample.tongzhang.com.mvpsample.core.http.api;
 
 import io.reactivex.Observable;
-import mvpsample.tongzhang.com.mvpsample.model.bean.BaseResponse;
-import mvpsample.tongzhang.com.mvpsample.model.bean.login.UserData;
+import mvpsample.tongzhang.com.mvpsample.core.bean.BaseResponse;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
-public interface Api {
+public interface WanAndroidApi {
 
     String HOST = "https://www.wanandroid.com";
     /**
@@ -32,4 +32,5 @@ public interface Api {
      */
     @POST("/user/register")
     Observable<BaseResponse> getRegisterData(@Query("username") String username, @Query("password")String password, @Query("repassword")String repassword);
+
 }

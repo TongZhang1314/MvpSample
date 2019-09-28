@@ -1,4 +1,4 @@
-package mvpsample.tongzhang.com.mvpsample.model.bean.login;
+package mvpsample.tongzhang.com.mvpsample.core.bean.login;
 
 import java.util.List;
 

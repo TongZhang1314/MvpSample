@@ -1,4 +1,4 @@
-package mvpsample.tongzhang.com.mvpsample.model.bean;
+package mvpsample.tongzhang.com.mvpsample.core.bean;
 
 public class BaseResponse<T> {
     public static final int SUCCESS = 0;

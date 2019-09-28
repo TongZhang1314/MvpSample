@@ -1,12 +1,9 @@
 package mvpsample.tongzhang.com.mvpsample.presenter;
 
-import android.util.Log;
-
 import mvpsample.tongzhang.com.mvpsample.base.RxPresenter;
 import mvpsample.tongzhang.com.mvpsample.base.contract.RegisterContract;
-import mvpsample.tongzhang.com.mvpsample.model.NetModel;
-import mvpsample.tongzhang.com.mvpsample.model.bean.BaseResponse;
-import mvpsample.tongzhang.com.mvpsample.model.bean.login.UserData;
+import mvpsample.tongzhang.com.mvpsample.core.NetModel;
+import mvpsample.tongzhang.com.mvpsample.core.bean.BaseResponse;
 import mvpsample.tongzhang.com.mvpsample.utils.BaseObserver;
 import mvpsample.tongzhang.com.mvpsample.utils.RxUtils;
 

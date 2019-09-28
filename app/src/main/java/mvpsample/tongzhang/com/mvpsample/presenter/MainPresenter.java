@@ -2,7 +2,7 @@ package mvpsample.tongzhang.com.mvpsample.presenter;
 
 import mvpsample.tongzhang.com.mvpsample.base.RxPresenter;
 import mvpsample.tongzhang.com.mvpsample.base.contract.MainContract;
-import mvpsample.tongzhang.com.mvpsample.model.NetModel;
+import mvpsample.tongzhang.com.mvpsample.core.NetModel;
 
 public class MainPresenter extends RxPresenter<MainContract.View> implements MainContract.Presenter {
     private NetModel netModel;

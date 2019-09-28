@@ -6,8 +6,8 @@ import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
-import mvpsample.tongzhang.com.mvpsample.model.bean.BaseResponse;
-import mvpsample.tongzhang.com.mvpsample.model.http.exception.OtherException;
+import mvpsample.tongzhang.com.mvpsample.core.bean.BaseResponse;
+import mvpsample.tongzhang.com.mvpsample.core.http.exception.OtherException;
 
 public class RxUtils {
     /**

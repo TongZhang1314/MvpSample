@@ -1,16 +1,15 @@
-package mvpsample.tongzhang.com.mvpsample.model;
+package mvpsample.tongzhang.com.mvpsample.core;
 
 import io.reactivex.Observable;
-import mvpsample.tongzhang.com.mvpsample.model.bean.BaseResponse;
-import mvpsample.tongzhang.com.mvpsample.model.bean.login.UserData;
-import mvpsample.tongzhang.com.mvpsample.model.http.RetrofitCreateHelper;
-import mvpsample.tongzhang.com.mvpsample.model.http.api.Api;
+import mvpsample.tongzhang.com.mvpsample.core.bean.BaseResponse;
+import mvpsample.tongzhang.com.mvpsample.core.http.RetrofitCreateHelper;
+import mvpsample.tongzhang.com.mvpsample.core.http.api.WanAndroidApi;
 
 public class NetModel {
     private static NetModel instance;
-    private Api api;
+    private WanAndroidApi api;
     private NetModel() {
-        api = RetrofitCreateHelper.createApi(Api.class, Api.HOST);
+        api = RetrofitCreateHelper.createApi(WanAndroidApi.class, WanAndroidApi.HOST);
     }
 
     public static NetModel getInstance() {

@@ -1,4 +1,4 @@
-package mvpsample.tongzhang.com.mvpsample.model.http.exception;
+package mvpsample.tongzhang.com.mvpsample.core.http.exception;
 
 /**
  * @author quchao

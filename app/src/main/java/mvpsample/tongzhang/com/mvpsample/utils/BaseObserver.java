@@ -1,10 +1,8 @@
 package mvpsample.tongzhang.com.mvpsample.utils;
 
-import android.text.TextUtils;
-
 import io.reactivex.observers.ResourceObserver;
 import mvpsample.tongzhang.com.mvpsample.base.BaseView;
-import mvpsample.tongzhang.com.mvpsample.model.bean.BaseResponse;
+import mvpsample.tongzhang.com.mvpsample.core.bean.BaseResponse;
 
 
 /**

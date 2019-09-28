@@ -1,6 +1,5 @@
-package mvpsample.tongzhang.com.mvpsample.model.http;
+package mvpsample.tongzhang.com.mvpsample.core.http;
 
-import android.util.ArraySet;
 import android.util.Log;
 
 import java.io.UnsupportedEncodingException;

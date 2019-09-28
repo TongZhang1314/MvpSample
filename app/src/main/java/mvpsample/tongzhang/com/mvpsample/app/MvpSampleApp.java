@@ -10,9 +10,18 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 
 import java.util.Stack;
 
+import javax.inject.Inject;
+
+import dagger.android.DispatchingAndroidInjector;
+import mvpsample.tongzhang.com.mvpsample.di.component.AppComponent;
+import mvpsample.tongzhang.com.mvpsample.di.component.DaggerAppComponent;
+
 public class MvpSampleApp extends Application {
     private static MvpSampleApp instance;
     private Stack<Activity> activities;
+    @Inject
+    DispatchingAndroidInjector<Activity> mAndroidInjector;
+    private static AppComponent mAppComponent;
 
     public static synchronized MvpSampleApp getInstance() {
         return instance;
@@ -27,6 +36,8 @@ public class MvpSampleApp extends Application {
         SmartRefreshLayout.setDefaultRefreshHeaderCreator((context, layout) -> new ClassicsHeader(context));
         //设置全局的Footer构建器
         SmartRefreshLayout.setDefaultRefreshFooterCreator((context, layout) -> new ClassicsFooter(context).setDrawableSize(20));
+
+        mAppComponent = DaggerAppComponent.builder().build();
     }
 
     public void addActivity(Activity act) {

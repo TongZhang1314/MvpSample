@@ -9,6 +9,7 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
     @Override
     protected void initPresenter() {
     //test git
+        //
     }
 
     @Override

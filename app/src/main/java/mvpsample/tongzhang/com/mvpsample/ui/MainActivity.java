@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.netobserver.annotation.NetWork;
+import com.example.netobserver.type.NetType;
+
 import java.util.Objects;
 
 import mvpsample.tongzhang.com.mvpsample.R;
@@ -28,6 +31,11 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     @Override
     protected void initEventAndData() {
 
+
+    }
+
+    @NetWork(netType = NetType.CMWAP)
+    public void testNetWork(NetType netType){
 
     }
 

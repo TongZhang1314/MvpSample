@@ -1,6 +1,7 @@
 package mvpsample.tongzhang.com.mvpsample.ui.home.fragment;
 
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -17,7 +18,7 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
     RecyclerView rvMain;
     @Override
     protected void initPresenter() {
-
+        Handler  handler = new Handler();
     }
 
     @Override

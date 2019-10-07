@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 
 
+import com.example.netobserver.NetworkManager;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
@@ -38,6 +39,9 @@ public class MvpSampleApp extends Application {
         SmartRefreshLayout.setDefaultRefreshFooterCreator((context, layout) -> new ClassicsFooter(context).setDrawableSize(20));
 
         mAppComponent = DaggerAppComponent.builder().build();
+
+        //添加网络wifi/gprs监听
+        NetworkManager.getDefault().init(this);
     }
 
     public void addActivity(Activity act) {

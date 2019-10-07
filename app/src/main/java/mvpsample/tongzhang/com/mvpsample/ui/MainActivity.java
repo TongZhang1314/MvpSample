@@ -3,6 +3,7 @@ package mvpsample.tongzhang.com.mvpsample.ui;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.netobserver.annotation.NetWork;
 import com.example.netobserver.type.NetType;
@@ -34,9 +35,19 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
 
     }
 
-    @NetWork(netType = NetType.CMWAP)
+    @NetWork(netType = NetType.WIFI)
     public void testNetWork(NetType netType){
-
+        switch (netType){
+            case WIFI:
+                Toast.makeText(this,"当前网络切换至wifi",Toast.LENGTH_SHORT).show();
+                break;
+            case NONE:
+                Toast.makeText(this,"当前网络切换至none",Toast.LENGTH_SHORT).show();
+                break;
+            case CMWAP:
+                Toast.makeText(this,"当前网络切换至流量",Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 
 }

@@ -6,6 +6,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.netobserver.annotation.NetWork;
+import com.example.netobserver.type.NetType;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 import mvpsample.tongzhang.com.mvpsample.R;
@@ -68,5 +71,20 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     @Override
     public void loginFail() {
 
+    }
+
+    @NetWork(netType = NetType.WIFI)
+    public void testNetWork(NetType netType){
+        switch (netType){
+            case WIFI:
+                Toast.makeText(this,"当前网络切换至wifi",Toast.LENGTH_SHORT).show();
+                break;
+            case NONE:
+                Toast.makeText(this,"当前网络切换至none",Toast.LENGTH_SHORT).show();
+                break;
+            case CMWAP:
+                Toast.makeText(this,"当前网络切换至流量",Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }

@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.WindowManager;
 
 
+import com.example.netobserver.NetworkManager;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportActivity;
@@ -32,6 +34,8 @@ public abstract class SimpleActivity extends SupportActivity {
         setContentView(getLayout());
         mUnBinder = ButterKnife.bind(this);
         mContext = this;
+        //添加进网络监听列表中
+        NetworkManager.getDefault().registerObserver(this);
         onViewCreated();
         MvpSampleApp.getInstance().addActivity(this);
         whiteTheme();
@@ -100,6 +104,8 @@ public abstract class SimpleActivity extends SupportActivity {
     protected void onDestroy() {
         super.onDestroy();
         MvpSampleApp.getInstance().removeTop();
+        //解除网络观察
+        NetworkManager.getDefault().unRegisterObserver(this);
         if (mUnBinder != null && mUnBinder != Unbinder.EMPTY) {
             mUnBinder.unbind();
             mUnBinder = null;
